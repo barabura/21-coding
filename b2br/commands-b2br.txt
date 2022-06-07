@@ -1,0 +1,38 @@
+apt purge xorg - проверка графической оболочки
+service ufw status - проверка статуса фаерволла
+service ssh status - проверка ssh
+uname -a - информация о системе
+who - пользователи /etc/passwd | grep "baura"
+groups <username> - проверка групп пользователя
+adduser <username> - создание нового пользователя
+passwd <username> - пароль
+groupadd <groupname> - создать группу
+usermod -aG <group_to_add> <username> - добавить пользователя в группу
+hostname - имя хоста
+nano /etc/hosts - nano /etc/hostname - изменение имени хоста reboot
+lsblk - разметка дисков
+apt list --installed | grep "sudo" - установленные программы и вывод sudo
+usermod -aG sudo <username> - добавление пользователя в судо
+Добавить пользователя в /etc/sudoers (visudo) reboot
+/var/log/sudo/
+cat /var/log/sudo/sudo.log - проверка обновления логов
+apt list --installed | grep "ufw" - проверка установки
+ufw status
+ufw allow 8080 - новое правило для открытия порта 8080
+ufw deny 8080
+sudo ufw status numbered
+sudo ufw delete <number>
+service ssh status
+ssh <username>@localhost -p 4242
+nano /etc/ssh/sshd_config
+Зайти через SSH под ранее созданного пользователя. Убедиться невозможно использовать SSH с пользователем «root».
+cron
+crontab -e
+Сделать так, чтобы скрипт запускался каждые 30 секунд.
+lsblk
+Зайти на вордпресс
+systemctl status fail2ban
+tail -f /var/log/fail2ban.log
+nano /etc/fail2ban/jail.local
+apt purge apache2
+apt purge nginx
