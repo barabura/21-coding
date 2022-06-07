@@ -1,0 +1,4 @@
+leaks -atExit -- ./pipex f1 "grep hell" "wc -l" f2
+./pipex f1 "grep hell" "wc -l" f2
+./pipex f1 "cat" "cat" f2
+./pipex f1 "grep hell" "cat" f2
